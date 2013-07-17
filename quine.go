@@ -1,0 +1,1 @@
+package main;import(."fmt";."strings");func main(){qs:="package main;import(.\"fmt\";.\"strings\");func main(){qs:=\"%s\";p:=Replace(qs,\"\\\\\",\"\\\\\\\\\",-1);p=Replace(p,\"\\\"\",\"\\\\\\\"\",-1);Sprintf(qs,p);Printf(qs,p)}";p:=Replace(qs,"\\","\\\\",-1);p=Replace(p,"\"","\\\"",-1);Sprintf(qs,p);Printf(qs,p)}
