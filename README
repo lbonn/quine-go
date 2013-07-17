@@ -18,6 +18,8 @@ using a base64 encoding of the code. To rebuild it, just use:
 
     $  make clean && make
 
+I did not remove line jumps in this one to keep it clean.
+
 Tests
 -----
 
@@ -27,3 +29,9 @@ Just run:
     $  make check
 
 to verify that everything is in order.
+
+Others
+------
+
+I will happily accept tricks to make these quines shorter, if you do
+not have something better to do :).
