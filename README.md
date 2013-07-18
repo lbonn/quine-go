@@ -32,11 +32,10 @@ size: 163 bytes
 e.go
 ----
 
-Slightly degenerate version. Triggers a syntax error message identical to the
+Slightly degenerate version: triggers a syntax error message identical to the
 source file.
 
 This is tuned to work with the standard go compiler version 1.1 and can break very easily (just rename the file).
-
 It has a short and unexplicit file name to minimize its size.
 
 size: 47 bytes
