@@ -22,6 +22,13 @@ using a base64 encoding of the code. To rebuild it, just use:
 
 size: 278 bytes
 
+quinefmt.go
+-----------
+
+This quine tries to pass through gofmt without being modified. Unsurprisingly, it is significantly larger than the minimal one.
+
+size: 163 bytes
+
 Tests
 -----
 

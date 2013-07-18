@@ -1,9 +1,12 @@
 DIR = base64
 GENERATOR = $(DIR)/base64_gen
 TEMPLATE = $(DIR)/template.go
-QUINE64 = quine64.go
 
-QUINES = quine.go $(QUINE64)
+STANDARD = quine.go
+QUINE64 = quine64.go
+QUINEFMT = quinefmt.go
+
+QUINES = $(STANDARD) $(QUINE64) $(QUINEFMT)
 
 .PHONY: clean check
 
@@ -17,4 +20,5 @@ clean:
 	-$(RM) -rf $(GENERATOR) $(QUINE64)
 
 check: $(QUINES)
+	gofmt -d $(QUINEFMT)
 	-$(foreach Q, $(QUINES), go run $(Q) | diff - $(Q);)
