@@ -10,6 +10,8 @@ quine.go
 Simple quine, trying to be as compact as possible.
 Uses the '%q' format verb to avoid re-escaping the code by hand.
 
+size: 118 bytes
+
 quine64.go
 ----------
 
@@ -17,6 +19,8 @@ Thanks to go extensive standard library, it is very easy to write a quine
 using a base64 encoding of the code. To rebuild it, just use:
 
     $  make clean && make
+
+size: 278 bytes
 
 Tests
 -----
