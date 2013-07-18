@@ -1,1 +1,1 @@
-package main;import(."fmt");func main(){qs:="package main;import(.\"fmt\");func main(){qs:=%q;Printf(qs,qs)}";Printf(qs,qs)}
+package main;import(."fmt");func main(){q:="package main;import(.\"fmt\");func main(){q:=%q;Printf(q,q)}";Printf(q,q)}
