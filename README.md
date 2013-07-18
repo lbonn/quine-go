@@ -7,8 +7,8 @@ Nothing new or even smart, just had some time to kill.
 quine.go
 --------
 
-A classic quine using escaping tricks and trying to be compact (no linejump).
-Not very pretty though...
+Simple quine, trying to be as compact as possible.
+Uses the '%q' format verb to avoid re-escaping the code by hand.
 
 quine64.go
 ----------
@@ -17,8 +17,6 @@ Thanks to go extensive standard library, it is very easy to write a quine
 using a base64 encoding of the code. To rebuild it, just use:
 
     $  make clean && make
-
-I did not remove line jumps in this one to keep it clean.
 
 Tests
 -----
