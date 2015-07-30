@@ -1,10 +1,8 @@
 package main
 
-import (
-	. "fmt"
-)
+import "fmt"
 
 func main() {
-	q := "package main\n\nimport (\n\t. \"fmt\"\n)\n\nfunc main() {\n\tq := %q\n\tPrintf(q, q)\n}\n"
-	Printf(q, q)
+	q := "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tq := %q\n\tfmt.Printf(q, q)\n}\n"
+	fmt.Printf(q, q)
 }

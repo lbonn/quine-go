@@ -27,7 +27,7 @@ quinefmt.go
 
 This quine tries to pass through gofmt without being modified. Unsurprisingly, it is significantly larger than the minimal one.
 
-size: 163 bytes
+size: 154 bytes
 
 e.go
 ----
