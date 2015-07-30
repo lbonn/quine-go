@@ -1,6 +1,6 @@
 DIR = base64
-GENERATOR = $(DIR)/base64_gen
-TEMPLATE = $(DIR)/template.go
+GENERATOR = $(DIR)/base64_gen.go
+TEMPLATE = $(DIR)/template.go_
 
 STANDARD = quine.go
 QUINE64 = quine64.go
@@ -9,16 +9,15 @@ QUINEERR = e.go
 
 QUINES = $(STANDARD) $(QUINE64) $(QUINEFMT)
 
-.PHONY: clean check check_err
+.PHONY: all clean check check_err
+
+all: $(QUINES) check
 
 $(QUINE64): $(GENERATOR) $(TEMPLATE)
-	./$(GENERATOR) $(TEMPLATE) > $@
-
-$(GENERATOR): $(GENERATOR).go
-	go build -o $@ $<
+	go run $(GENERATOR) $(TEMPLATE) > $@
 
 clean:
-	-$(RM) -rf $(GENERATOR) $(QUINE64)
+	-$(RM) -rf $(QUINE64)
 
 check: $(QUINES) check_err
 	gofmt -d $(QUINEFMT)
